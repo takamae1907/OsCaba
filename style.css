@@ -1,0 +1,371 @@
+/* Importando fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.spotify-container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #121212;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+    /* padding-bottom removido */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #4a2c20, #121212 70%);
+}
+
+.album-art {
+    width: 70%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.title-block {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.title-block h1 {
+    font-size: 1.8em;
+    margin: 0 0 5px 0;
+}
+
+.title-block p {
+    font-size: 1em;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+#loveButton {
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 25px;
+}
+
+#loveButton:hover {
+    transform: scale(1.05);
+}
+
+/* =============================================== */
+/* ====== ESTILOS DO PLAYER DE MÚSICA (MOVIDO) === */
+/* =============================================== */
+.music-player {
+    width: 100%;
+    background-color: transparent;
+    /* Fundo transparente pois já está no header */
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.song-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.song-art {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.song-info .song-title {
+    font-weight: bold;
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.song-info .song-artist {
+    font-size: 0.8em;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.player-controls-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.control-icon {
+    font-size: 1.2em;
+    color: #b3b3b3;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.control-icon:hover {
+    color: #fff;
+}
+
+.play-icon {
+    font-size: 2.2em;
+    color: #fff;
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.time {
+    font-size: 0.7em;
+    color: #b3b3b3;
+}
+
+.progress-container {
+    flex-grow: 1;
+    background-color: #404040;
+    height: 4px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    background-color: #fff;
+    width: 0%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+main {
+    padding: 20px;
+}
+
+.about h2,
+.timeline-section h2,
+.lyrics-section h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #282828;
+}
+
+.about p {
+    color: #b3b3b3;
+    line-height: 1.6;
+}
+
+/* =============================================== */
+/* ========= ESTILOS DA NOVA SEÇÃO LETRAS ======== */
+/* =============================================== */
+.lyrics-box {
+    background-color: #004A7F;
+    /* Azul inspirado no print */
+    border-radius: 8px;
+    padding: 20px;
+    color: #fff;
+}
+
+.lyrics-box p {
+    margin: 0 0 1em 0;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.lyrics-box p:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-section {
+    margin-top: 30px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #282828;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background-color: #1DB954;
+    border: 3px solid #121212;
+    top: 28px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -8px;
+}
+
+.timeline-content {
+    padding: 15px;
+    background-color: #181818;
+    position: relative;
+    border-radius: 8px;
+}
+
+.timeline-content .date {
+    color: #1DB954;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.polaroid {
+    background: #f4f4f4;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important;
+}
+
+.polaroid img {
+    width: 100%;
+}
+
+.polaroid p {
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    color: #333;
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+}
+
+.timeline-item:nth-child(odd) .polaroid {
+    transform: rotate(-4deg);
+}
+
+.timeline-item:nth-child(even) .polaroid {
+    transform: rotate(4deg);
+}
+/* =============================================== */
+/* =========== CÓDIGO DE RESPONSIVIDADE ========== */
+/* =============================================== */
+/* Para telas com largura máxima de 420px */
+
+@media (max-width: 420px) {
+
+    /* --- Ajustes no Cabeçalho --- */
+    .header {
+        padding: 30px 15px;
+    }
+
+    .title-block h1 {
+        font-size: 1.5em; /* Diminui um pouco o nome principal */
+    }
+
+    .title-block p {
+        font-size: 0.9em;
+    }
+
+    /* --- Ajustes no Player de Música --- */
+    .controls {
+        gap: 15px; /* Diminui o espaço entre os botões */
+    }
+
+    .play-icon {
+        font-size: 2em; /* Diminui um pouco o botão de play */
+    }
+
+
+    /* --- Ajustes na Seção "Letras" --- */
+    .lyrics-box p {
+        font-size: 1em; /* Diminui a fonte da letra */
+    }
+
+
+    /* --- Ajustes na Linha do Tempo para telas pequenas --- */
+    /* Transforma a linha do tempo em uma única coluna */
+    .timeline::after {
+        left: 20px; /* Move a linha central para a esquerda */
+    }
+
+    /* Alinha todos os itens à esquerda */
+    .timeline-item,
+    .timeline-item:nth-child(even) {
+        width: 100%;
+        left: 0;
+        padding-left: 50px; /* Adiciona espaço para a linha e o ponto */
+        padding-right: 15px;
+    }
+
+    /* Posiciona os pontos de todos os itens na nova linha */
+    .timeline-item::after,
+    .timeline-item:nth-child(even)::after {
+        left: 12px; /* (Posição da linha (20px)) - (metade da largura do ponto (8px)) */
+    }
+}
